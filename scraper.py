@@ -5,6 +5,7 @@ from bs4.element import Comment
 import json
 import traceback
 
+
 def scraper(url, resp):
     links = extract_next_links(url, resp)
     return [link for link in links if is_valid(link)]
@@ -97,3 +98,7 @@ def is_valid(url):
     except TypeError:
         print("TypeError for ", parsed)
         raise
+
+
+if __name__ == "__main__":
+    print(is_valid(input()))
