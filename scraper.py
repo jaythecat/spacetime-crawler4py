@@ -46,7 +46,7 @@ def extract_next_links(url, resp):
     except Exception as e:
         print(e)
         return []
-
+    print(f"Found {len(found)} links")
     return found
 
 def is_valid(url):
