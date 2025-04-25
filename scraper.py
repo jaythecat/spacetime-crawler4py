@@ -41,8 +41,7 @@ def extract_next_links(url, resp):
 
         # Get links in response
         for anchor in soup.find_all("a"):
-            if is_valid(anchor['href']):
-                found.append(anchor['href'])
+            found.append(anchor['href'])
     except Exception as e:
         print(e)
         return []
