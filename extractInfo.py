@@ -1,6 +1,7 @@
 import json
 
 def tokenize(json_obj) -> dict[str, int]:
+    num_unique = 0
     num_words = 0
     longest = {
         "length": -1,
