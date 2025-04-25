@@ -19,13 +19,15 @@ def extract_next_links(url, resp):
     found = []
     try:
         parsed_content = BeautifulSoup(resp.raw_response.content, "html.parser")
+        if resp.error != 200:
+            return []
         for anchor in parsed_content.find_all("a"):
             if is_valid(anchor['href']):
                 found.append(anchor['href'])
     except Exception as e:
         resp.status = 0
         resp.error = e
-        return
+        return []
     return found
 
 def is_valid(url):
