@@ -1,11 +1,11 @@
 import json
 
-def tokenize(text: str, frequencies) -> dict[str, int]:
+def tokenize(json_obj) -> dict[str, int]:
     curr = []
     tokens = []
     frequencies = {}
-    for char in text:
-        char_lower = char.lower()
+    for key, value in json_obj:
+        char_lower = value.lower()
         if char_lower.isalnum():
             curr.append(char_lower)
         else:
@@ -21,5 +21,7 @@ def tokenize(text: str, frequencies) -> dict[str, int]:
 def generate_report(frequencies: dict[str, int]):
     with open("url_responses.json", 'r') as json_file:
         data = json.load(json_file)
-        for item in data:
-            tokenize(data[item])
+        tokenized = tokenize(data)
+
+if __name__ == '__main__':
+    generate_report()

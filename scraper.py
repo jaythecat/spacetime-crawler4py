@@ -35,7 +35,7 @@ def extract_next_links(url, resp):
             dictionary[resp.url] = ""
 
         # Save data to json file
-        with open("url_responses.json", "w") as outfile:
+        with open("url_responses.json", "a") as outfile:
             json.dump(dictionary, outfile)
 
 
@@ -46,6 +46,7 @@ def extract_next_links(url, resp):
     except Exception as e:
         print(e)
         return []
+
     return found
 
 def is_valid(url):
