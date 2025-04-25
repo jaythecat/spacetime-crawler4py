@@ -10,7 +10,6 @@ def tokenize(json_obj) -> dict[str, int]:
     tokens = []
     frequencies = {}
     for key, value in json_obj:
-        pagelen = 0
         if value != "":
             num_unique+=1
         char_lower = value.lower()
@@ -26,7 +25,7 @@ def tokenize(json_obj) -> dict[str, int]:
 
         frequencies[token] = frequencies.get(token, 0) + 1
     print("Unique Pages: " + num_unique)
-    print(longest["url"] + ": " + longest["length"])
+    print(longest["url"] + ": " + str(longest["length"]))
     return frequencies
 
 def print_frequencies(frequencies: dict[str, int]) -> None:
