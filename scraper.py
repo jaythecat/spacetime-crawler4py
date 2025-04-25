@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 import json
-
+import traceback
 
 def scraper(url, resp):
     links = extract_next_links(url, resp)
