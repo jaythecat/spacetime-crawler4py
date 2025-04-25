@@ -49,7 +49,10 @@ def extract_next_links(url, resp):
 
         # Get links in response
         for anchor in soup.find_all("a"):
-            found.append(anchor['href'])
+            try:
+                found.append(anchor['href'])
+            except KeyError:
+                pass
 
     except FileNotFoundError as e:
         print(f"Error: File {e} not found")
@@ -80,10 +83,12 @@ def is_valid(url):
                 return False
 
         # Check if in valid domain
-        if not re.match(r".ics.uci.edu/|.cs.uci.edu/|.informatics.uci.edu/"
-                        + "|.stat.uci.edu/|today.uci.edu/department/information_computer_sciences/",
+        if not re.match(r"ics\.uci\.edu|\.cs\.uci\.edu|informatics\.uci\.edu|stat\.uci\.edu",
                         parsed.hostname):
             return False
+        # today.uci.edu/department/information_computer_sciences/ formatting
+        if parsed.hostname == "today.uci.edu" and parsed.path.startswith("/department/information_computer_sciences"):
+            return True
 
         return not re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
