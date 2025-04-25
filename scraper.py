@@ -33,7 +33,10 @@ def extract_next_links(url, resp):
 
         # Save data to json file
         with open("url_responses.json", "r+") as outfile:
-            data = json.load(outfile)
+            try:
+                data = json.load(outfile)
+            except (FileNotFoundError, json.decoder.JSONDecodeError):
+                data = {}
             data[url] = all_texts
             if url != resp.url:
                 data[resp.url] = ""
