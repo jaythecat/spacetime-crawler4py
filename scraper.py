@@ -25,8 +25,7 @@ def extract_next_links(url, resp):
             if is_valid(anchor['href']):
                 found.append(anchor['href'])
     except Exception as e:
-        resp.status = 0
-        resp.error = e
+        print(e)
         return []
     return found
 
@@ -38,6 +37,9 @@ def is_valid(url):
         parsed = urlparse(url)
         if parsed.scheme not in set(["http", "https"]):
             return False
+
+
+
         return not re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
             + r"|png|tiff?|mid|mp2|mp3|mp4"
