@@ -49,8 +49,14 @@ def extract_next_links(url, resp):
         # Get links in response
         for anchor in soup.find_all("a"):
             found.append(anchor['href'])
+
+    except FileNotFoundError as e:
+        print(f"Error: File {e} not found")
+    except UnicodeDecodeError as e:
+        print(f"Error: File {e} contains invalid characters")
     except Exception as e:
-        print(e)
+        print(f"ERROR: {e}")
+        traceback.print_exc()
         return []
     print(f"Found {len(found)} links")
     return found
