@@ -1,6 +1,8 @@
 import re
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
+from bs4.element import Comment
+import json
 
 def scraper(url, resp):
     links = extract_next_links(url, resp)
@@ -18,10 +20,27 @@ def extract_next_links(url, resp):
     # Return a list with the hyperlinks (as strings) scrapped from resp.raw_response.content
     found = []
     try:
-        parsed_content = BeautifulSoup(resp.raw_response.content, "html.parser")
-        if resp.error != 200:
+        if resp.status != 200:
+            print(resp.error)
             return []
-        for anchor in parsed_content.find_all("a"):
+        # Parse html response
+        soup = BeautifulSoup(resp.raw_response.content, "html.parser")
+
+        # Text data in response
+        all_texts = soup.get_text()
+        dictionary = {
+            url : all_texts
+        }
+        if url != resp.url:
+            dictionary[resp.url] = ""
+
+        # Save data to json file
+        with open("url_responses.json", "w") as outfile:
+            json.dump(dictionary, outfile)
+
+
+        # Get links in response
+        for anchor in soup.find_all("a"):
             if is_valid(anchor['href']):
                 found.append(anchor['href'])
     except Exception as e:
@@ -38,6 +57,14 @@ def is_valid(url):
         if parsed.scheme not in set(["http", "https"]):
             return False
 
+        # Check if url has already been scraped
+        with open("url_responses.json", 'r') as json_file:
+            data = json.load(json_file)
+        keys = data.keys()
+        if url in keys:
+            return False
+
+        # Check if in valid domain
         if not re.match(r".ics.uci.edu/|.cs.uci.edu/|.informatics.uci.edu/"
                         + "|.stat.uci.edu/|today.uci.edu/department/information_computer_sciences/",
                         parsed.hostname):
