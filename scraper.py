@@ -32,15 +32,18 @@ def extract_next_links(url, resp):
         all_texts = soup.get_text()
 
         # Save data to json file
-        with open("url_responses.json", "r+") as outfile:
-            try:
+        # Try to load previous json file if exists
+        try:
+            with open("url_responses.json", "r") as outfile:
                 data = json.load(outfile)
-            except (FileNotFoundError, json.decoder.JSONDecodeError):
-                data = {}
-            data[url] = all_texts
-            if url != resp.url:
-                data[resp.url] = ""
-            outfile.seek(0)
+        except (FileNotFoundError, json.decoder.JSONDecodeError):
+            data = {}
+        # update dictionary with new url data
+        data[url] = all_texts
+        if url != resp.url:
+            data[resp.url] = ""
+        # write back to json file
+        with open("url_responses.json", "w") as outfile:
             json.dump(data, outfile, indent=4)
 
         # Get links in response
