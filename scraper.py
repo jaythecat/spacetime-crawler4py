@@ -38,7 +38,10 @@ def is_valid(url):
         if parsed.scheme not in set(["http", "https"]):
             return False
 
-
+        if not re.match(r".ics.uci.edu/|.cs.uci.edu/|.informatics.uci.edu/"
+                        + "|.stat.uci.edu/|today.uci.edu/department/information_computer_sciences/",
+                        parsed.hostname):
+            return False
 
         return not re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
