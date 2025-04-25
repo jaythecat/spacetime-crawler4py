@@ -4,9 +4,11 @@ from bs4 import BeautifulSoup
 from bs4.element import Comment
 import json
 
+
 def scraper(url, resp):
     links = extract_next_links(url, resp)
     return [link for link in links if is_valid(link)]
+
 
 def extract_next_links(url, resp):
     # Implementation required.
@@ -28,16 +30,15 @@ def extract_next_links(url, resp):
 
         # Text data in response
         all_texts = soup.get_text()
-        dictionary = {
-            url : all_texts
-        }
-        if url != resp.url:
-            dictionary[resp.url] = ""
 
         # Save data to json file
-        with open("url_responses.json", "a") as outfile:
-            json.dump(dictionary, outfile)
-
+        with open("url_responses.json", "r+") as outfile:
+            data = json.load(outfile)
+            data[url] = all_texts
+            if url != resp.url:
+                data[resp.url] = ""
+            outfile.seek(0)
+            json.dump(data, outfile, indent=4)
 
         # Get links in response
         for anchor in soup.find_all("a"):
@@ -47,6 +48,7 @@ def extract_next_links(url, resp):
         return []
     print(f"Found {len(found)} links")
     return found
+
 
 def is_valid(url):
     # Decide whether to crawl this url or not. 
@@ -60,9 +62,9 @@ def is_valid(url):
         # Check if url has already been scraped
         with open("url_responses.json", 'r') as json_file:
             data = json.load(json_file)
-        keys = data.keys()
-        if url in keys:
-            return False
+            keys = data.keys()
+            if url in keys:
+                return False
 
         # Check if in valid domain
         if not re.match(r".ics.uci.edu/|.cs.uci.edu/|.informatics.uci.edu/"
@@ -81,5 +83,5 @@ def is_valid(url):
             + r"|rm|smil|wmv|swf|wma|zip|rar|gz)$", parsed.path.lower())
 
     except TypeError:
-        print ("TypeError for ", parsed)
+        print("TypeError for ", parsed)
         raise
