@@ -1,7 +1,7 @@
 import json
 
 def tokenize(json_obj) -> dict[str, int]:
-    num_unique = 0
+    num_words = 0
     longest = {
         "length": -1,
         "url": ""
@@ -19,8 +19,13 @@ def tokenize(json_obj) -> dict[str, int]:
             if curr:
                 tokens.append(''.join(curr))
                 curr = []
+                num_words += 1
+        if num_words > longest["length"]:
+            longest["length"] = num_words
+            longest["url"] = key
     if curr:
         tokens.append(''.join(curr))
+
     for token in tokens:
 
         frequencies[token] = frequencies.get(token, 0) + 1
