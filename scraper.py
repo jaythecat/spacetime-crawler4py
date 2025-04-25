@@ -72,8 +72,11 @@ def is_valid(url):
     # There are already some conditions that return False.
     try:
         parsed = urlparse(url)
+
+        """
         if parsed.scheme not in set(["http", "https"]):
-            return False
+            return False 
+        """
 
         # Check if url has already been scraped
         with open("url_responses.json", 'r') as json_file:
@@ -87,8 +90,8 @@ def is_valid(url):
                         parsed.hostname):
             return False
         # today.uci.edu/department/information_computer_sciences/ formatting
-        if parsed.hostname == "today.uci.edu" and parsed.path.startswith("/department/information_computer_sciences"):
-            return True
+        if parsed.hostname == "today.uci.edu" and not parsed.path.startswith("/department/information_computer_sciences"):
+            return False
 
         return not re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
