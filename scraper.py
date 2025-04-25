@@ -1,8 +1,7 @@
 import re
+from sys import exception
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
-import requests
-
 
 def scraper(url, resp):
     links = extract_next_links(url, resp)
@@ -19,19 +18,15 @@ def extract_next_links(url, resp):
     #         resp.raw_response.content: the content of the page!
     # Return a list with the hyperlinks (as strings) scrapped from resp.raw_response.content
     try:
-        html_content = requests.get(url).text
-        resp.raw_response = html_content
-        soup = BeautifulSoup(html_content, "html.parser")
-        for anchor in htmlParse.find_all("a")
-            if is_valid(anchor['href'])
-                #
+        found = []
+        parsed_content = BeautifulSoup(resp.raw_response.content, "html.parser")
+        for anchor in parsed_content.find_all("a"):
+            if is_valid(anchor['href']):
+                found.append(anchor['href'])
     except exception as e:
         resp.status = 0
         resp.error = e
         return
-    resp.url = url
-    resp.raw_response.url = url
-    resp.status = 200
     return list()
 
 def is_valid(url):
