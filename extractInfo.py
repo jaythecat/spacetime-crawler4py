@@ -60,7 +60,7 @@ def print_frequencies(frequencies: dict[str, int]) -> None:
 def generate_report():
     with open("url_responses.json", 'r') as json_file:
         data = json.load(json_file)
-        tokenized = tokenize(data)
+        tokenize(data)
 
 
 if __name__ == '__main__':
