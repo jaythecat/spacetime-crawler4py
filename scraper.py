@@ -103,7 +103,7 @@ def is_valid(url):
             return False
 
         # Check if in valid domain
-        if not re.match(r"ics\.uci\.edu|\.cs\.uci\.edu|informatics\.uci\.edu|stat\.uci\.edu",
+        if parsed.hostname is None or not re.match(r"ics\.uci\.edu|\.cs\.uci\.edu|informatics\.uci\.edu|stat\.uci\.edu",
                         parsed.hostname):
             return False
         # today.uci.edu/department/information_computer_sciences/ formatting
