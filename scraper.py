@@ -112,11 +112,15 @@ def is_valid(url):
             return False
 
         # filter out urls that have dates yyyy-mm-dd and yyyy-mm to avoid calendars
-        if re.search(r'\d{4}-\d{2}(-\d{2})?', parsed.path):
+        if re.search(r'\d{4}-\d{2}(-\d{2})?', url):
             return False
 
         # a url that is a copy for iCalendar - skip
-        if re.search(r'\?ical=1', url):
+        if re.search(r'ical=1', url):
+            return False
+
+        # invalid domain according to robot
+        if re.search(r'uci\.ics\.edu/people', url):
             return False
 
         return not re.match(
