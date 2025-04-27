@@ -33,7 +33,7 @@ def extract_next_links(url, resp):
         soup = BeautifulSoup(resp.raw_response.content, "html.parser")
 
         # Text data in response
-        all_texts = soup.get_text()
+        all_texts = soup.get_text(separator=' ', strip=True)
 
         # Save data to json file
         # Try to load previous json file if exists
@@ -104,10 +104,11 @@ def is_valid(url):
 
         # Check if in valid domain
         if parsed.hostname is None or not re.match(r"ics\.uci\.edu|\.cs\.uci\.edu|informatics\.uci\.edu|stat\.uci\.edu",
-                        parsed.hostname):
+                                                   parsed.hostname):
             return False
         # today.uci.edu/department/information_computer_sciences/ formatting
-        if parsed.hostname == "today.uci.edu" and not parsed.path.startswith("/department/information_computer_sciences"):
+        if parsed.hostname == "today.uci.edu" and not parsed.path.startswith(
+                "/department/information_computer_sciences"):
             return False
 
         return not re.match(
