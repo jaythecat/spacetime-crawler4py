@@ -120,7 +120,7 @@ def is_valid(url):
             return False
 
         # invalid domain according to robot
-        if re.search(r'uci\.ics\.edu/people', url):
+        if re.search(r'ics\.uci\.edu/people', url):
             return False
 
         return not re.match(
