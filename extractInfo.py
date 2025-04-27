@@ -42,8 +42,8 @@ def tokenize(json_obj):
             longest["length"] = len(filtered_words)
             longest["url"] = url
 
-    for token in filtered_words:
-        frequencies[token] = frequencies.get(token, 0) + 1
+        for token in filtered_words:
+            frequencies[token] = frequencies.get(token, 0) + 1
     print(f"Unique Pages: {unique_pages}")
     print(longest["url"] + ": " + str(longest["length"]))
     print_frequencies(frequencies)
