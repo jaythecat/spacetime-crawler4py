@@ -5,6 +5,9 @@ from bs4.element import Comment
 import json
 import traceback
 
+# global var to keep track of already visited urls
+url_set = set()
+
 
 def scraper(url, resp):
     links = extract_next_links(url, resp)
@@ -39,10 +42,20 @@ def extract_next_links(url, resp):
                 data = json.load(outfile)
         except (FileNotFoundError, json.decoder.JSONDecodeError):
             data = {}
+
+        # if the url_set is empty populate it
+        if not url_set:
+            url_set.update(data.keys())
+
+        # add current url to set of already searched urls
+        url_set.add(url)
+
         # update dictionary with new url data
         data[url] = all_texts
         if url != resp.url:
             data[resp.url] = ""
+            url_set.add(resp.url)
+
         # write back to json file
         with open("url_responses.json", "w") as outfile:
             json.dump(data, outfile, indent=4)
@@ -78,12 +91,16 @@ def is_valid(url):
             return False 
         """
 
-        # Check if url has already been scraped
+        """
+        Check if url has already been scraped
         with open("url_responses.json", 'r') as json_file:
             data = json.load(json_file)
             keys = data.keys()
             if url in keys:
                 return False
+        """
+        if url in url_set:
+            return False
 
         # Check if in valid domain
         if not re.match(r"ics\.uci\.edu|\.cs\.uci\.edu|informatics\.uci\.edu|stat\.uci\.edu",
@@ -91,7 +108,7 @@ def is_valid(url):
             return False
         # today.uci.edu/department/information_computer_sciences/ formatting
         if parsed.hostname == "today.uci.edu" and not parsed.path.startswith("/department/information_computer_sciences"):
-            return True
+            return False
 
         return not re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
