@@ -111,6 +111,10 @@ def is_valid(url):
                 "/department/information_computer_sciences"):
             return False
 
+        # filter out urls that have dates yyyy-mm-dd and yyyy-mm to avoid calendars
+        if re.search(r'/\d{4}-\d{2}(-\d{2})?', parsed.path):
+            return False
+
         return not re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
             + r"|png|tiff?|mid|mp2|mp3|mp4"
