@@ -115,9 +115,12 @@ def is_valid(url):
         if re.search(r'\d{4}-\d{2}(-\d{2})?', url):
             return False
 
-
         # invalid domain according to robot
         if re.search(r'ics\.uci\.edu/people', url):
+            return False
+
+        # invalid domain according to robot
+        if re.search(r'ics\.uci\.edu/happening/', url):
             return False
 
         return not re.match(
