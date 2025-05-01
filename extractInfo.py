@@ -1,5 +1,6 @@
 import json
 import re
+from urllib.parse import urlparse, urlunparse, urldefrag
 
 STOP_WORDS = {"a", "about", "above", "after", "again", "against", "all", "am", "an", "and", "any", "are", "aren't",
               "as", "at", "be", "because", "been", "before", "being", "below", "between", "both", "but", "by", "can't",
@@ -44,9 +45,43 @@ def tokenize(json_obj):
 
         for token in filtered_words:
             frequencies[token] = frequencies.get(token, 0) + 1
+
+    # This only prints the pages scraped
     print(f"Unique Pages: {unique_pages}")
+    # print_unique_urls()
     print(longest["url"] + ": " + str(longest["length"]))
     print_frequencies(frequencies)
+
+
+def print_unique_urls():
+    with open("urls.txt", "r") as f:
+        urls = [line.strip() for line in f if line.strip()]
+
+    unique_urls = set()
+    subdomain_pages = {}
+
+    for url in urls:
+        url_no_fragment, _ = urldefrag(url)
+        unique_urls.add(url_no_fragment)
+
+    for url in unique_urls:
+        # subdomains in urls
+        parsed = urlparse(url)
+        hostname = parsed.hostname
+        if hostname and hostname.endswith(".uci.edu"):
+            url_no_fragment, _ = urldefrag(url)
+            if hostname not in subdomain_pages:
+                subdomain_pages[hostname] = set()
+            subdomain_pages[hostname].add(url_no_fragment)
+
+    print(f"Unique URLs: {len(unique_urls)}")
+    print_subdomain_pages(subdomain_pages)
+
+
+def print_subdomain_pages(subdomain_pages):
+    print("Subdomain pages:")
+    for subdomain in sorted(subdomain_pages):
+        print(f"{subdomain}: {len(subdomain_pages[subdomain])}")
 
 
 def print_frequencies(frequencies: dict[str, int]) -> None:
