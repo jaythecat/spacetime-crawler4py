@@ -78,10 +78,10 @@ def print_unique_urls():
     print_subdomain_pages(subdomain_pages)
 
 
-def print_subdomain_pages(subdomain_pages):
+def print_subdomain_pages(subdomain_pages: dict[str, int]):
     print("Subdomain pages:")
-    for subdomain in sorted(subdomain_pages):
-        print(f"{subdomain}: {len(subdomain_pages[subdomain])}")
+    for subdomain, page_set in sorted(subdomain_pages.items(), key=lambda item: len(item[1]), reverse=True):
+        print(f"{subdomain}: {len(page_set)}")
 
 
 def print_frequencies(frequencies: dict[str, int]) -> None:
