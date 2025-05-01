@@ -47,8 +47,8 @@ def tokenize(json_obj):
             frequencies[token] = frequencies.get(token, 0) + 1
 
     # This only prints the pages scraped
-    print(f"Unique Pages: {unique_pages}")
-    # print_unique_urls()
+    # print(f"Unique Pages: {unique_pages}")
+    print_unique_urls()
     print(longest["url"] + ": " + str(longest["length"]))
     print_frequencies(frequencies)
 
