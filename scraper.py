@@ -67,6 +67,11 @@ def extract_next_links(url, resp):
             except KeyError:
                 pass
 
+        # add found urls to page
+        with open("urls.txt", "a") as file:
+            for url in found:
+                file.write(url + "\n")
+
     except FileNotFoundError as e:
         print(f"Error: File {e} not found")
     except UnicodeDecodeError as e:
