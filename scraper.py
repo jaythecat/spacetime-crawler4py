@@ -128,6 +128,10 @@ def is_valid(url):
         if re.search(r'ics\.uci\.edu/happening/', url):
             return False
 
+        # a url that is a copy for iCalendar - skip
+        if re.search(r'ical=1', url):
+            return False
+
         return not re.match(
             r".*\.(css|js|bmp|gif|jpe?g|ico"
             + r"|png|tiff?|mid|mp2|mp3|mp4"
