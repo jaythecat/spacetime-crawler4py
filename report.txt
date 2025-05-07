@@ -1,0 +1,387 @@
+Unique URLs: 19657
+
+
+URL with the most words: https://ics.uci.edu/csmajor with 8255 words
+
+
+Most common 50 words:
+1. ics - 48546
+2. research - 48467
+3. science - 34396
+4. student - 32083
+5. learning - 31477
+6. us - 29745
+7. computer - 27078
+8. graduate - 26901
+9. undergraduate - 26482
+10. faculty - 23003
+11. news - 19192
+12. community - 19015
+13. informatics - 18518
+14. view - 17988
+15. events - 17191
+16. uci - 17123
+17. programs - 15915
+18. alumni - 15783
+19. machine - 15593
+20. students - 15172
+21. data - 14919
+22. spotlights - 14895
+23. text - 14303
+24. follow - 14257
+25. contrast - 14192
+26. computing - 13832
+27. statistics - 13808
+28. 2025 - 13570
+29. honors - 13564
+30. school - 12915
+31. bren - 12225
+32. donald - 12135
+33. future - 11726
+34. irvine - 11610
+35. advising - 11590
+36. get - 11477
+37. academic - 11475
+38. tech - 11240
+39. corporate - 11015
+40. accessibility - 10883
+41. involved - 10851
+42. connected - 10593
+43. lab - 10421
+44. awards - 10330
+45. information - 10103
+46. systems - 9775
+47. health - 9024
+48. share - 8898
+49. sciences - 8217
+50. people - 8216
+
+
+Subdomain found: 326
+Subdomains listed:
+50th.uci.edu: 1
+accessibility.ics.uci.edu: 2
+accessibility.uci.edu: 2
+acoi.ics.uci.edu: 3
+activate.uci.edu: 1
+admissions.uci.edu: 6
+advance.uci.edu: 1
+ai-science.uci.edu: 1
+aiclub.ics.uci.edu: 1
+aisc.uci.edu: 1
+allofus.health.uci.edu: 1
+alp.uci.edu: 2
+alumni.uci.edu: 3
+antnet.uci.edu: 1
+antrepreneur.uci.edu: 6
+ap.uci.edu: 4
+apply.grad.uci.edu: 3
+appointments.web.uci.edu: 2
+archive.ics.uci.edu: 3
+aris.ss.uci.edu: 1
+asterix.ics.uci.edu: 1
+asterixdb.ics.uci.edu: 1
+asuci.uci.edu: 1
+basicneeds.uci.edu: 2
+bbcomp.tech.uci.edu: 3
+biaslab.ics.uci.edu: 1
+bigdipa.ccbs.uci.edu: 1
+blackcultures.uci.edu: 4
+brain.uci.edu: 2
+brilliantfuture.uci.edu: 3
+calendar.law.uci.edu: 1
+calit2.uci.edu: 1
+campusgroups.uci.edu: 3
+campusorgs.uci.edu: 3
+canvas.eee.uci.edu: 21
+capstone.cs.uci.edu: 1
+career.uci.edu: 5
+casb.uci.edu: 1
+catalogue.uci.edu: 35
+cdc.uci.edu: 1
+ce.uci.edu: 6
+ceb.bio.uci.edu: 1
+cei.uci.edu: 1
+cellfate.uci.edu: 2
+ceres.uci.edu: 1
+cert.ics.uci.edu: 2
+changeofmajor.uci.edu: 5
+checkmate.ics.uci.edu: 1
+chenli.ics.uci.edu: 1
+chrs.web.uci.edu: 1
+cloudberry.ics.uci.edu: 3
+clubs.uci.edu: 4
+cml.ics.uci.edu: 6
+cncm.som.uci.edu: 1
+cnlm.uci.edu: 4
+code.ics.uci.edu: 1
+commencement.uci.edu: 1
+communications.uci.edu: 2
+connectedlearning.uci.edu: 17
+contecenter.uci.edu: 4
+coronavirustwittermap.ics.uci.edu: 1
+counseling.uci.edu: 2
+courselisting.ics.uci.edu: 4
+cpri.uci.edu: 5
+create.ics.uci.edu: 3
+cs.ics.uci.edu: 12
+cs.uci.edu: 1
+cvr.bio.uci.edu: 1
+cyberclub.ics.uci.edu: 1
+dance.arts.uci.edu: 1
+dash.lib.uci.edu: 1
+datascience.uci.edu: 3
+dev.dos.uci.edu: 1
+dgillen.ics.uci.edu: 3
+directory.uci.edu: 1
+dos.uci.edu: 1
+drama.arts.uci.edu: 3
+dream.uci.edu: 1
+ds4all.ics.uci.edu: 1
+dsc.uci.edu: 1
+dtei.uci.edu: 15
+due.uci.edu: 2
+duttgroup.ics.uci.edu: 1
+e3.uci.edu: 4
+education.uci.edu: 6
+eee.uci.edu: 31
+efi.eng.uci.edu: 1
+em.uci.edu: 1
+engage.alumni.uci.edu: 4
+engage.uci.edu: 2
+engineering.uci.edu: 29
+esports.uci.edu: 6
+esportsconference.uci.edu: 1
+etad.calit2.uci.edu: 3
+evoke.ics.uci.edu: 3
+faculty.sites.uci.edu: 17
+faculty.uci.edu: 3
+flamingo.ics.uci.edu: 1
+fortinlab.bio.uci.edu: 1
+futurehealth.ics.uci.edu: 4
+futurehealth.uci.edu: 4
+give.uci.edu: 2
+givingday.uci.edu: 1
+grad.uci.edu: 38
+gram.eng.uci.edu: 1
+grape.ics.uci.edu: 1
+graphics.ics.uci.edu: 2
+graphmod.ics.uci.edu: 1
+guides.lib.uci.edu: 3
+hack.ics.uci.edu: 3
+hai.ics.uci.edu: 1
+halloffame.tech.uci.edu: 13
+healthaffairs.uci.edu: 1
+historyproject.uci.edu: 1
+hombao.ics.uci.edu: 1
+homecoming.uci.edu: 1
+honors.uci.edu: 1
+housing.uci.edu: 4
+hpi.ics.uci.edu: 2
+iasl.ics.uci.edu: 3
+ic.uci.edu: 7
+ics.uci.edu: 4517
+icts.uci.edu: 4
+ieee.ics.uci.edu: 1
+illuminations.uci.edu: 4
+imaging.uci.edu: 1
+inclusion.uci.edu: 15
+industryshowcase.ics.uci.edu: 5
+infectiousdiseaseinitiative.uci.edu: 1
+informatics-stage.ics.uci.edu: 1
+informatics.uci.edu: 1
+ingenuity.uci.edu: 1
+innovation.uci.edu: 20
+insite.ics.uci.edu: 1
+intranet.ics.uci.edu: 3
+ipubmed.ics.uci.edu: 1
+irap.uci.edu: 1
+iseb.uci.edu: 1
+isg.ics.uci.edu: 8
+isr.uci.edu: 15
+ivecg.uci.edu: 8
+jgarcia.ics.uci.edu: 1
+larc.uci.edu: 1
+latinx.uci.edu: 1
+lgbtrc.uci.edu: 2
+linguistics.uci.edu: 1
+luci.ics.uci.edu: 1
+maillists.uci.edu: 1
+malek.ics.uci.edu: 1
+mcs.ics.uci.edu: 4
+mdogucu.ics.uci.edu: 1
+mds.ics.uci.edu: 5
+mecps.uci.edu: 2
+medschool.uci.edu: 5
+merage.uci.edu: 9
+mhcid.ics.uci.edu: 3
+mhcis.ics.uci.edu: 1
+microbiome.uci.edu: 1
+mind.uci.edu: 4
+mondego.ics.uci.edu: 1
+mover.ics.uci.edu: 2
+mse.ics.uci.edu: 1
+mswe.ics.uci.edu: 1
+mt-live.ics.uci.edu: 1
+music.arts.uci.edu: 2
+nalini.ics.uci.edu: 2
+newkirkcenter.uci.edu: 2
+newport.eecs.uci.edu: 2
+news.lib.uci.edu: 1
+news.uci.edu: 102
+ngs.ics.uci.edu: 2
+nursing.uci.edu: 1
+oai.ics.uci.edu: 4
+oai.tech.uci.edu: 3
+odit.uci.edu: 3
+ombuds.uci.edu: 1
+open.uci.edu: 1
+orientation.uci.edu: 2
+phit.uci.edu: 2
+profiles.icts.uci.edu: 1
+provost.uci.edu: 4
+ps.uci.edu: 6
+psearch.ics.uci.edu: 1
+publichealth.uci.edu: 2
+rcic.uci.edu: 1
+recruit.ap.uci.edu: 17
+redmiles.ics.uci.edu: 1
+reg.uci.edu: 1
+research.uci.edu: 2
+scholars.uci.edu: 1
+sconce.ics.uci.edu: 1
+sdcl.ics.uci.edu: 2
+senate.uci.edu: 4
+shc.uci.edu: 1
+shib.service.uci.edu: 1
+shpe.eng.uci.edu: 1
+sites.ps.uci.edu: 3
+sites.uci.edu: 58
+sli.ics.uci.edu: 4
+soar.uci.edu: 1
+socialecology.uci.edu: 1
+socsci.uci.edu: 1
+solmaz.eng.uci.edu: 1
+som.uci.edu: 1
+special.lib.uci.edu: 1
+sprout.ics.uci.edu: 2
+ssi.uci.edu: 1
+stairs.ics.uci.edu: 1
+stat.uci.edu: 1
+statconsulting.ics.uci.edu: 5
+statconsulting.uci.edu: 3
+statistics-stage.ics.uci.edu: 1
+stephanus.tlg.uci.edu: 1
+steyvers.socsci.uci.edu: 1
+strategicplan.uci.edu: 1
+student-council.ics.uci.edu: 2
+studentaffairs.uci.edu: 1
+studentcenter.uci.edu: 2
+studentcouncil.ics.uci.edu: 7
+studentwellness.uci.edu: 1
+studyabroad.uci.edu: 1
+summer.uci.edu: 3
+summeracademy.ics.uci.edu: 3
+sustainability.uci.edu: 6
+swiki.ics.uci.edu: 2
+tad.ics.uci.edu: 1
+tech.uci.edu: 12
+testingcenter.uci.edu: 4
+tippers.ics.uci.edu: 1
+tippersweb.ics.uci.edu: 4
+transfercenter.uci.edu: 1
+transformativeplay.ics.uci.edu: 14
+tutoring.ics.uci.edu: 5
+ua-web.uadv.uci.edu: 1
+ucistories.lib.uci.edu: 1
+ugradforms.ics.uci.edu: 1
+undergraduate.eng.uci.edu: 1
+unite.ics.uci.edu: 3
+urop.uci.edu: 2
+veteran.uci.edu: 2
+vision.ics.uci.edu: 2
+water.uci.edu: 1
+webfiles.uci.edu: 1
+wics.ics.uci.edu: 8
+wiki.ics.uci.edu: 2
+womenintech.uci.edu: 10
+womxnscenter.uci.edu: 1
+womxnshub.uci.edu: 1
+writingproject.uci.edu: 1
+www-db.ics.uci.edu: 1
+www.accounting.uci.edu: 1
+www.admissions.uci.edu: 5
+www.ags.uci.edu: 1
+www.alumni.uci.edu: 1
+www.anesthesiology.uci.edu: 1
+www.anthropology.uci.edu: 1
+www.arts.uci.edu: 2
+www.bic.uci.edu: 1
+www.bio.uci.edu: 1
+www.calit2.uci.edu: 4
+www.camp.uci.edu: 1
+www.campusrec.uci.edu: 6
+www.career.uci.edu: 4
+www.ccc.uci.edu: 1
+www.cecs.uci.edu: 1
+www.changeofmajor.uci.edu: 1
+www.chem.uci.edu: 1
+www.childcare.uci.edu: 1
+www.chs.uci.edu: 1
+www.commencement.uci.edu: 1
+www.compass.uci.edu: 1
+www.cosmos.uci.edu: 1
+www.counseling.uci.edu: 1
+www.cs.uci.edu: 29
+www.disability.uci.edu: 1
+www.dsc.uci.edu: 1
+www.emergencymed.uci.edu: 1
+www.epi.uci.edu: 1
+www.esports.uci.edu: 2
+www.ess.uci.edu: 1
+www.faculty.uci.edu: 38
+www.grad.uci.edu: 6
+www.housing.uci.edu: 1
+www.humanities.uci.edu: 4
+www.ic.uci.edu: 1
+www.ics.uci.edu: 453
+www.icts.uci.edu: 9
+www.igb.uci.edu: 8
+www.imbs.uci.edu: 1
+www.informatics.uci.edu: 195
+www.isr.uci.edu: 3
+www.its.uci.edu: 1
+www.law.uci.edu: 7
+www.lgbtrc.uci.edu: 1
+www.lib.uci.edu: 3
+www.math.uci.edu: 5
+www.mecps.uci.edu: 1
+www.meded.uci.edu: 1
+www.mind.uci.edu: 8
+www.nacs.uci.edu: 2
+www.networkedsystems.uci.edu: 1
+www.oeod.uci.edu: 2
+www.ofas.uci.edu: 2
+www.oir.uci.edu: 3
+www.oit.uci.edu: 4
+www.physics.uci.edu: 3
+www.policies.uci.edu: 1
+www.provost.uci.edu: 1
+www.reg.uci.edu: 17
+www.saep.socsci.uci.edu: 1
+www.senate.uci.edu: 1
+www.shs.uci.edu: 1
+www.shuttle.uci.edu: 1
+www.sites.uci.edu: 1
+www.socsci.uci.edu: 6
+www.som.uci.edu: 4
+www.stat.uci.edu: 39
+www.studentcenter.uci.edu: 1
+www.studyabroad.uci.edu: 1
+www.transci.uci.edu: 1
+www.uci.edu: 4
+www.urop.uci.edu: 8
+www.veteran.uci.edu: 1
+www.welcomeweek.uci.edu: 1
+www.writingcenter.uci.edu: 1
+zotmail.oit.uci.edu: 7
